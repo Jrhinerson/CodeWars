@@ -60,3 +60,17 @@ function howMuchILoveYou(nbPetals) {
     return "not at all"  
     }
 }
+
+//5/27/23
+
+//In this kata you will create a function that takes a list of non-negative integers and string and returns a new list with the strings filtered out.
+
+function filter_list(l) {
+  let numArray = []
+  for (let i = 0; i < l.length; i++) {
+  const element = l[i];
+  if (typeof element === 'number') {
+    numArray.push(element)
+  }
+} return numArray
+}
