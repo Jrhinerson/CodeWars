@@ -74,3 +74,33 @@ function filter_list(l) {
   }
 } return numArray
 }
+
+//In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+//Example: "ATTGC" --> "TAACG"
+
+function DNAStrand(dna){
+  let compDNAStrand = ""
+  for (let i = 0; i < dna.length; i++) {
+    const element = dna[i].toLowerCase()
+    if (element === "a") {
+      compDNAStrand += 'T'
+    }
+    else if (element === "t") {
+      compDNAStrand += 'A'
+    }
+    else if (element === "c") {
+      compDNAStrand += 'G'
+    }
+    else if (element === "g") {
+      compDNAStrand += 'C'
+    }
+  }
+  return compDNAStrand
+}
+//Write a function that takes in a string of onew or more words, and returns the same string, but with all fiver or more letter words reversed. Strings passed in will consist of only letters and spaces. Spaces will be uncluded only  when more than one word is present.
+
+function spinWords(words){
+  return words.split(' ').map(function (word) {
+    return (word.length > 4) ? word.split('').reverse().join('') : word;
+  }).join(' ');
+}
